@@ -2,10 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-// void main(){
-//   runApp(MyApp());
-//   }
-
 // by arrow Function 
 void main()=> runApp(MyApp());
 
@@ -19,11 +15,31 @@ class MyApp extends StatelessWidget{
       theme : ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:Scaffold(
-        appBar: AppBar(),
-      ),
+      home:MyHomePage(),
     );
   }
-
   }
+  class MyHomePage extends StatelessWidget {
+    const MyHomePage({super.key});
+
+    @override
+    Widget build(BuildContext context) {
+      return  Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          title: Text('Facebook'),
+          centerTitle: true,
+        ),
+        body: const Center(
+          child: Text("Hellow Word",style: TextStyle(
+            fontSize: 34,
+            color: Colors.red,
+            // backgroundColor: Colors.green,
+            fontWeight: FontWeight.bold
+          ),),
+        ),
+      );
+    }
+  }
+
 
